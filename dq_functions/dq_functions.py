@@ -481,8 +481,7 @@ class DataQuality:
                     "driver" : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
                 }
 
-                jdbcPort = 1433
-                jdbcUrl = f"jdbc:sqlserver://{jdbcHostname}:{jdbcPort};database={jdbcDatabase};user={username};password={password}"
+                jdbcUrl = f"jdbc:sqlserver://{jdbcHostname}:1433;database={jdbcDatabase};user={username};password={password}"
 
                 df_final.write.jdbc(url=jdbcUrl, table="dbo.controlDQAnalisis_Deequ", mode="append", properties=connectionProperties)
 
