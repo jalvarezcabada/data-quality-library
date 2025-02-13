@@ -1,1 +1,1 @@
-data-queality-library
+data-quality-library
